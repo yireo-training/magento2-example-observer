@@ -1,19 +1,41 @@
 <?php
+/**
+ *
+ */
+
 namespace Yireo\TestObserver\Observer;
 
 use Magento\Framework\Event\Observer;
+use Magento\Framework\Event\ObserverInterface;
+use Yireo\TestObserver\Manager\Logger;
 
-class LogControllerAction
+/**
+ * Class LogControllerAction
+ * @package Yireo\TestObserver\Observer
+ */
+class LogControllerAction implements ObserverInterface
 {
-    public function __construct(Data $helper)
+    /**
+     * @var Logger
+     */
+    private $logger;
+
+    /**
+     * LogControllerAction constructor.
+     * @param Logger $logger
+     */
+    public function __construct(Logger $logger)
     {
-        $this->helper = $helper;
+        $this->logger = $logger;
     }
 
+    /**
+     * @param Observer $observer
+     */
     public function execute(Observer $observer)
     {
-        $controllerAction = $observer->getEvent()->getControllerAction();
+        /** @var \Magento\Framework\App\RequestInterface $request */
         $request = $observer->getEvent()->getRequest();
-        $this->helper->log($request.'='.$controllerAction);
+        $this->logger->log($request->getModuleName().' = '.$request->getActionName());
     }
 }

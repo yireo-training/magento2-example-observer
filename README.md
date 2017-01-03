@@ -1,4 +1,19 @@
 # TestObserver module for Magento 2
-Installation:
+Dummy module to show the behaviour of monitoring observable events using an observer. This observer simply logs pointless details from the request.
+
+# Installation
+To install use the following composer command:
 
     composer require yireo/test-observer
+
+Next enable the module:
+
+    bin/magento module:enable Yireo_TestObserver
+    bin/magento setup:upgrade
+    
+And flush the cache:
+
+    bin/magento cache:clean
+
+# Proof of concept
+After installing the module, every frontend action should be logged to `var/log/system.log`.
