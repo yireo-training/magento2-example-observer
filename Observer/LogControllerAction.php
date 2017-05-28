@@ -3,15 +3,15 @@
  *
  */
 
-namespace Yireo\TestObserver\Observer;
+namespace Yireo\ExampleObserver\Observer;
 
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
-use Yireo\TestObserver\Manager\Logger;
+use Yireo\ExampleObserver\Manager\Logger;
 
 /**
  * Class LogControllerAction
- * @package Yireo\TestObserver\Observer
+ * @package Yireo\ExampleObserver\Observer
  */
 class LogControllerAction implements ObserverInterface
 {

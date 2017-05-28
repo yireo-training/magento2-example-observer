@@ -1,5 +1,5 @@
 <?php
-namespace Yireo\TestObserver\Manager;
+namespace Yireo\ExampleObserver\Manager;
 
 use Psr\Log\LoggerInterface;
 

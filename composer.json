@@ -1,5 +1,5 @@
 {
-    "name": "yireo/test-observer",
+    "name": "yireo-training/magento2-example-observer",
     "license": "OSL-3.0",
     "type": "magento2-module",
     "version": "0.0.1",
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yireo\\TestObserver\\": ""
+            "Yireo\\ExampleObserver\\": ""
         },        
         "files": [
             "registration.php"
