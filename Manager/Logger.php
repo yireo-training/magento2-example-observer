@@ -5,12 +5,14 @@ use Psr\Log\LoggerInterface;
 
 class Logger
 {
+    private $logger;
+
     public function __construct(LoggerInterface $logger)
     {
         $this->logger = $logger;
     }
 
-    public function log($message)
+    public function log(string $message)
     {
         $this->logger->notice($message);
     }
