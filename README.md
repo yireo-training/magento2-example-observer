@@ -4,7 +4,7 @@ Dummy module to show the behaviour of monitoring observable events using an obse
 # Installation
 To install use the following composer command:
 
-    composer require yireo-training/magento2-example-observer
+    composer require yireo-training/magento2-example-observer:dev-master
 
 Next enable the module:
 
